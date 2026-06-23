@@ -6,6 +6,13 @@ author: AtomCollide-智械工坊团队
 tags: [hermes, doctor, diagnosis, self-healing, agent, credential-integrity]
 requires_tools: [read_file, write_file, patch, search_files, terminal, clarify]
 requires_toolsets: [file, terminal]
+
+triggers:
+  - 智能体健康
+  - Agent诊断
+  - 自诊断自愈
+  - hermes-doctor
+  - 白龙马医生
 ---
 
 # Hermes Doctor
