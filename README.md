@@ -366,3 +366,38 @@ bailongma-doctor test --target .            # 预期: summary: 14/14 passed
 
 *AtomCollide-智械工坊团队出品*
 
+
+## 🔐 凭证完整性检查 (NEW)
+
+融合自 langgenius/dify 的凭证完整性验证机制。
+
+**检测能力**:
+- 凭证存在性检查
+- 凭证策略合规性检查
+- 运行时凭证验证
+- 凭证生命周期管理
+
+```python
+from modules.credential_integrity import CredentialIntegrityChecker
+
+checker = CredentialIntegrityChecker()
+
+# 检查Agent凭证
+results = checker.check_agent_credentials("/path/to/agent")
+
+# 检查环境变量凭证
+results = checker.check_environment_credentials()
+
+# 检查技能凭证
+results = checker.check_skill_credentials("/path/to/skill")
+
+# 生成报告
+report = checker.generate_report(results)
+print(f"风险等级: {report['risk_level']}")
+```
+
+**检测规则**:
+- 硬编码凭证检测
+- 凭证格式验证
+- 凭证长度检查
+- 占位符检测

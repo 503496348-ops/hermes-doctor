@@ -1,9 +1,9 @@
 ---
 name: hermes-doctor
-description: Hermes Agent 自诊断与安全自愈插件。用于 Hermes 插件、Agent、工具调用、运行时、配置、日志、飞书消息路由的体检、药方匹配、修复计划、病历记录和问题复盘。
-version: 0.1.2
+description: Hermes Agent 自诊断与安全自愈插件。用于 Hermes 插件、Agent、工具调用、运行时、配置、日志、飞书消息路由的体检、药方匹配、修复计划、病历记录、问题复盘和凭证完整性检查。
+version: 0.2.0
 author: AtomCollide-智械工坊团队
-tags: [hermes, doctor, diagnosis, self-healing, agent]
+tags: [hermes, doctor, diagnosis, self-healing, agent, credential-integrity]
 requires_tools: [read_file, write_file, patch, search_files, terminal, clarify]
 requires_toolsets: [file, terminal]
 ---
@@ -21,6 +21,7 @@ Hermes Doctor 是基于 Hermes 自身插件框架重构的 Agent 医生。功能
 - 用户说 `帮我修一下`、`自愈`、`怎么修`
 - 用户需要查询或写入历史处理记录
 - 用户要把飞书消息路由到本地 Hermes Doctor 动作
+- **凭证完整性检查**（NEW）
 
 不激活的场景：
 
@@ -60,6 +61,35 @@ python3 scripts/hermes_doctor.py test --target .
 | `case-record` | 写入脱敏病历 |
 | `case-search` | 查询历史病历 |
 | `feishu-route` | 把飞书/Lark 文本路由成本地动作 |
+
+## Credential Integrity Check (NEW)
+
+融合自 langgenius/dify 的凭证完整性验证机制。
+
+```python
+from modules.credential_integrity import CredentialIntegrityChecker
+
+checker = CredentialIntegrityChecker()
+
+# 检查Agent凭证
+results = checker.check_agent_credentials("/path/to/agent")
+
+# 检查环境变量凭证
+results = checker.check_environment_credentials()
+
+# 检查技能凭证
+results = checker.check_skill_credentials("/path/to/skill")
+
+# 生成报告
+report = checker.generate_report(results)
+print(f"风险等级: {report['risk_level']}")
+```
+
+**检测规则**:
+- 硬编码凭证检测
+- 凭证格式验证
+- 凭证长度检查
+- 占位符检测
 
 ## Safety
 
