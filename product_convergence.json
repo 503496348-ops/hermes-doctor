@@ -1,0 +1,23 @@
+{
+  "repo": "hermes-doctor",
+  "entrypoints": [],
+  "smoke_targets": [
+    "diagnostics/health_checker.py",
+    "diagnostics/session_contract_probe.py",
+    "scripts/health_scorer.py",
+    "scripts/hermes_doctor.py",
+    "scripts/product_convergence_gate.py"
+  ],
+  "known_external_reference_files": [
+    "diagnostics/__init__.py",
+    "diagnostics/error_classifier.py",
+    "diagnostics/health_checker.py",
+    "diagnostics/trace_manager.py",
+    "modules/credential_integrity.py",
+    "scripts/callback_handler.py",
+    "scripts/health_scorer.py",
+    "scripts/product_convergence_gate.py",
+    "scripts/trace_observability.py"
+  ],
+  "policy": "External/fusion references are allowed only when explicitly reviewed here; new fusion work must add a smoke target or entrypoint wiring."
+}
