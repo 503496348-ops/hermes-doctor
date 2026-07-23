@@ -10,6 +10,7 @@
     "diagnostics/session_contract_probe.py",
     "diagnostics/agent_runtime_diagnostics.py",
     "diagnostics/agent_bridge_preflight.py",
+    "diagnostics/memory_cross_client_integrity.py",
     "scripts/hermes_doctor.py",
     "scripts/product_convergence_gate.py",
     "diagnostics/agent_sandbox_runtime_context.py",
@@ -33,6 +34,7 @@
     "diagnostics/agent_runtime_diagnostics.py": "Hermes Agent runtime event-flow diagnostics",
     "diagnostics/agent_bridge_preflight.py": "Hermes Agent bridge preflight checks for workspace and profile isolation",
     "diagnostics/agent_sandbox_runtime_context.py": "Hermes Doctor sandbox runtime context endpoint for redacted pre-repair diagnostics",
+    "diagnostics/memory_cross_client_integrity.py": "Cross-client memory integrity: protocol fields, supersession chain, capacity, client coverage",
     "scripts/mem0_bridge.py": "Mem0-compatible history export bridge for convergence telemetry",
     "scripts/raven_bridge.py": "Raven bridge compatibility smoke harness for compatibility checks",
     "scripts/memory_bridge.py": "Memory bridge adapter for diagnostic context persistence"
