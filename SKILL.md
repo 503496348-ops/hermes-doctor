@@ -19,6 +19,14 @@ triggers:
 
 ## Sandbox Runtime Context（v1.2.0）
 
+## 快速开始
+
+```bash
+python3 scripts/cli.py --help
+python3 scripts/hermes_doctor.py --help
+```
+
+
 新增 `diagnostics/agent_sandbox_runtime_context.py`：生成脱敏的 Agent 沙盒运行环境摘要，暴露 profile、workspace、toolsets、写入边界和非阻断/阻断诊断，用于修复前先拿到上下文。
 
 > 📖 详细文档见 `references/` 目录
