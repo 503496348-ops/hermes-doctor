@@ -167,3 +167,13 @@ print(f"风险等级: {report['risk_level']}")
 ## Generic orchestration diagnostics
 
 Adds checks for transition-table drift, stale pending events, repeated delivery, missing flow logs, and broken confirmation payloads.
+
+## J-Space 增强（自监控/崩溃自愈）
+
+基于 J-Space Cognition Suite v3.2 的自监控协议增强 Agent 诊断能力：
+- 决策缝合点监控（五仪表盘检查）
+- 崩溃检测（词沙拉/重复循环/漂移）
+- 自愈协议（STOP→退回→识别→重启）
+- 证据分类（KNOWN/SUPPORTED/INFERRED/UNKNOWN）
+
+详见 `references/j-space-self-monitoring.md`
