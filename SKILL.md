@@ -177,3 +177,12 @@ Adds checks for transition-table drift, stale pending events, repeated delivery,
 - 证据分类（KNOWN/SUPPORTED/INFERRED/UNKNOWN）
 
 详见 `references/j-space-self-monitoring.md`
+
+## DNA Memory 融合（错误教训+诊断工作流）
+
+基于 [DNA Memory](https://github.com/AIPMAndy/dna-memory) 错误教训记忆增强：
+- 诊断记忆分型（error_lesson/workflow/decision/fact/insight/open_loop）
+- 错误教训写入规范（症状/错误诊断/正确修复/预防）
+- 跨session错误追踪（recall→匹配已知模式→应用/分析→写入）
+
+详见 `references/dna-memory-error-pattern.md`
