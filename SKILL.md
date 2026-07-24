@@ -5,15 +5,17 @@ license: MIT
 metadata:
   author: AtomCollide-智械工坊团队
   version: 1.2.0
-triggers:
-  - 智能体健康
-  - Agent诊断
-  - 自诊断自愈
-  - hermes-doctor
-  - 白龙马医生
 ---
 
 # Hermes Doctor
+
+## 触发条件
+
+- 智能体健康
+- Agent诊断
+- 自诊断自愈
+- hermes-doctor
+- 白龙马医生
 
 ## Sandbox Runtime Context（v1.2.0）
 
